@@ -52,12 +52,12 @@ hf_model.model.load_state_dict(state_dict)
 hf_model.lm_head = make_linear_from_emb(hf_model.model.shared)
 hf_model.save_pretrained(hf_path)
 
-# Convert flax
-
-hf_model = FlaxMBartForConditionalGeneration.from_pretrained(hf_path, from_pt=True)
-hf_model.save_pretrained(hf_path)
-
-# Convert tensorflow
-
-hf_model = TFMBartForConditionalGeneration.from_pretrained(hf_path, from_pt=True)
-hf_model.save_pretrained(hf_path)
+# # Convert flax
+#
+# hf_model = FlaxMBartForConditionalGeneration.from_pretrained(hf_path, from_pt=True)
+# hf_model.save_pretrained(hf_path)
+#
+# # Convert tensorflow
+#
+# hf_model = TFMBartForConditionalGeneration.from_pretrained(hf_path, from_pt=True)
+# hf_model.save_pretrained(hf_path)
